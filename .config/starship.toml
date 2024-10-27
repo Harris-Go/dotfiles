@@ -1,5 +1,4 @@
 format = """
-[ ](#444444)\
 $os\
 [ ](fg:#444444 bg:#af0000)\
 $directory\
@@ -10,7 +9,7 @@ $git_status\
 $python\
 $rlang\
 [ ](fg:#ffaf00)
-$character\
+[ ](fg:#444444)\
 """
 
 [character]

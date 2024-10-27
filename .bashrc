@@ -26,5 +26,4 @@ unset rc
 
 eval "$(starship init bash)"
 
-set -o vi
 alias config='/usr/bin/git --git-dir=/home/harris/.cfg/ --work-tree=/home/harris'
