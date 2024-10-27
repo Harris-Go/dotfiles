@@ -1,0 +1,70 @@
+format = """
+[ ](#444444)\
+$os\
+[ ](fg:#444444 bg:#af0000)\
+$directory\
+[ ](fg:#af0000 bg:#d75f00)\
+$git_branch\
+$git_status\
+[ ](fg:#d75f00 bg:#ffaf00)\
+$python\
+$rlang\
+[ ](fg:#ffaf00)
+$character\
+"""
+
+[character]
+success_symbol = "[ 󱞩](bold fg:#444444)"
+error_symbol = "[ 󱞩](bold fg:#af0000)"
+
+[os]
+style = "bold fg:#eeeeee bg:#444444"
+disabled = false
+
+[os.symbols]
+Fedora = "  "
+
+[directory]
+style = "bold bg:#af0000 fg:#eeeeee"
+format = "[$path ]($style)"
+truncation_length = 3
+truncation_symbol = ".../"
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[git_branch]
+symbol = " "
+style = "bold bg:#d75f00 fg:#eeeeee"
+truncation_length = 10
+truncation_symbol = "..."
+format = "[$symbol$branch(:$remote_branch)]($style)"
+
+[git_status]
+conflicted = "󰞇 "
+ahead = " "
+behind = " "
+diverged = "󰃻 "
+up_to_date = " "
+untracked = " "
+stashed = " "
+modified = " "
+staged = '[++$count ](bold bg:#005f87 fg:#eeeeee)'
+renamed = " "
+deleted = " "
+style = "bold bg:#d75f00 fg:#eeeeee"
+format = '([ \[$all_status$ahead_behind\]]($style))'
+
+[python]
+symbol = " "
+python_binary = ['python']
+style = "bold bg:#ffaf00 fg:#eeeeee"
+format = '[${symbol}${pyenv_prefix}(${version})( \($virtualenv\) )]($style)'
+
+[rlang]
+symbol = " "
+style = "bold bg:#ffaf00 fg:#eeeeee"
+format = '[$symbol ($version)]($style)'
