@@ -60,10 +60,10 @@ format = '([ \[$all_status$ahead_behind\]]($style))'
 [python]
 symbol = " "
 python_binary = ['python']
-style = "bold bg:#ffaf00 fg:#eeeeee"
+style = "bold bg:#ffaf00 fg:#444444"
 format = '[${symbol}${pyenv_prefix}(${version})( \($virtualenv\) )]($style)'
 
 [rlang]
 symbol = " "
-style = "bold bg:#ffaf00 fg:#eeeeee"
+style = "bold bg:#ffaf00 fg:#444444"
 format = '[$symbol ($version)]($style)'
