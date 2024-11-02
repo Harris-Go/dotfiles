@@ -15,18 +15,19 @@ $rlang\
 palette = 'everforest'
 
 [palettes.everforest]
-colour1 = '#D3C6AA'
+colour1 = '#1E2326'
 colour2 = '#E67E80'
 colour3 = '#E69875'
 colour4 = '#DBBC7F'
-foreground = '#232A2E'
+foreground = '#1E2326'
+foreground_dk = '#D3C6AA'
 
 [character]
 success_symbol = "[ 󱞩](bold fg:foreground)"
 error_symbol = "[ 󱞩](bold fg:#af0000)"
 
 [os]
-style = "bold fg:foreground bg:colour1"
+style = "bold fg:foreground_dk bg:colour1"
 disabled = false
 
 [os.symbols]
