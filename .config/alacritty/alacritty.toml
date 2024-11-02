@@ -1,6 +1,6 @@
 live_config_reload = true
 
-import = ["~/.config/alacritty/themes/themes/papercolor_light.toml"]
+import = ["~/.config/alacritty/themes/themes/everforest.toml"]
 
 [window]
 opacity = 0.9
@@ -12,6 +12,3 @@ bold = {family = "Hasklug Nerd Font", style = "Bold"}
 italic = {family = "Hasklug Nerd Font", style = "Italic"}
 bold_italic = {family = "Hasklug Nerd Font", style = "Bold Italic"}
 size = 14
-
-[colors]
-vi_mode_cursor = { text = "#eeeeee", cursor = "#af0000" }

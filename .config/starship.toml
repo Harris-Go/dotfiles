@@ -1,30 +1,39 @@
 format = """
 $os\
-[ ](fg:#444444 bg:#af0000)\
+[ ](fg:colour1 bg:colour2)\
 $directory\
-[ ](fg:#af0000 bg:#d75f00)\
+[ ](fg:colour2 bg:colour3)\
 $git_branch\
 $git_status\
-[ ](fg:#d75f00 bg:#ffaf00)\
+[ ](fg:colour3 bg:colour4)\
 $python\
 $rlang\
-[ ](fg:#ffaf00)
-[ ](fg:#444444)\
+[ ](fg:colour4)
+[ ](fg:foreground)\
 """
 
+palette = 'everforest'
+
+[palettes.everforest]
+colour1 = '#D3C6AA'
+colour2 = '#E67E80'
+colour3 = '#E69875'
+colour4 = '#DBBC7F'
+foreground = '#232A2E'
+
 [character]
-success_symbol = "[ 󱞩](bold fg:#444444)"
+success_symbol = "[ 󱞩](bold fg:foreground)"
 error_symbol = "[ 󱞩](bold fg:#af0000)"
 
 [os]
-style = "bold fg:#eeeeee bg:#444444"
+style = "bold fg:foreground bg:colour1"
 disabled = false
 
 [os.symbols]
 Fedora = "  "
 
 [directory]
-style = "bold bg:#af0000 fg:#eeeeee"
+style = "bold bg:colour2 fg:foreground"
 format = "[$path ]($style)"
 truncation_length = 3
 truncation_symbol = ".../"
@@ -37,7 +46,7 @@ truncation_symbol = ".../"
 
 [git_branch]
 symbol = " "
-style = "bold bg:#d75f00 fg:#eeeeee"
+style = "bold bg:colour3 fg:foreground"
 truncation_length = 10
 truncation_symbol = "..."
 format = "[$symbol$branch(:$remote_branch)]($style)"
@@ -51,19 +60,19 @@ up_to_date = " "
 untracked = " "
 stashed = " "
 modified = " "
-staged = '[++$count ](bold bg:#005f87 fg:#eeeeee)'
+staged = '[++$count ](bold bg:colour3 fg:foreground)'
 renamed = " "
 deleted = " "
-style = "bold bg:#d75f00 fg:#eeeeee"
+style = "bold bg:colour3 fg:foreground"
 format = '([ \[$all_status$ahead_behind\]]($style))'
 
 [python]
 symbol = " "
 python_binary = ['python']
-style = "bold bg:#ffaf00 fg:#444444"
+style = "bold bg:colour4 fg:foreground"
 format = '[${symbol}${pyenv_prefix}(${version})( \($virtualenv\) )]($style)'
 
 [rlang]
 symbol = " "
-style = "bold bg:#ffaf00 fg:#444444"
+style = "bold bg:colour4 fg:foreground"
 format = '[$symbol ($version)]($style)'
