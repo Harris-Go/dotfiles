@@ -30,9 +30,11 @@ vim.o.incsearch = true			-- Highlight incrementally
 -- Leader Key
 vim.g.mapleader = ';'
 -- Escape clears highlighting
-vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { noremap = true, silent = true })
 -- Leader s sources the file
-vim.api.nvim_set_keymap('n', '<leader>s', ':source<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<leader>s', ':source<CR>', { noremap = true, silent = true })
+-- Leader p runs pyython code
+vim.api.nvim_set_keymap('n', '<leader>p', ':w<CR>:!python %<CR>', { noremap = true })
 
 
 -- Treesitter Settings
