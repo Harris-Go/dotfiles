@@ -3,7 +3,7 @@ live_config_reload = true
 import = ["~/.config/alacritty/themes/themes/everforest.toml"]
 
 [window]
-opacity = 0.9
+opacity = 0.85
 blur = true
 
 [font]
