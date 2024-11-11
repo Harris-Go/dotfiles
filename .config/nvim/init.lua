@@ -5,6 +5,7 @@ Plug('sainnhe/everforest')
 Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
+Plug('tpope/vim-fugitive')
 vim.call('plug#end')
 
 -- Colourscheme Settings
