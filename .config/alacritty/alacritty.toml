@@ -1,6 +1,6 @@
-live_config_reload = true
+general.live_config_reload = true
 
-import = ["~/.config/alacritty/themes/themes/everforest.toml"]
+general.import = ["~/.config/alacritty/themes/themes/everforest.toml"]
 
 [window]
 opacity = 0.85
