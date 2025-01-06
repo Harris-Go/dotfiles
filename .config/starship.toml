@@ -8,6 +8,7 @@ $git_status\
 [ ](fg:colour3 bg:colour4)\
 $python\
 $rlang\
+$conda\
 [ ](fg:colour4)
 [ ](fg:foreground)\
 """
@@ -72,6 +73,11 @@ symbol = " "
 python_binary = ['python']
 style = "bold bg:colour4 fg:foreground"
 format = '[${symbol}${pyenv_prefix}(${version})( \($virtualenv\) )]($style)'
+
+[conda]
+symbol = " "
+style = "bold bg:colour4 fg:foreground"
+format = '[$symbol$environment]($style)'
 
 [rlang]
 symbol = " "
