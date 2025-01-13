@@ -72,7 +72,7 @@ format = '([ \[$all_status$ahead_behind\]]($style))'
 symbol = " "
 python_binary = ['python']
 style = "bold bg:colour4 fg:foreground"
-format = '[${symbol}${pyenv_prefix}(${version})( \($virtualenv\) )]($style)'
+format = '[${symbol}${pyenv_prefix}(${version})( \($virtualenv\) ) ]($style)'
 
 [conda]
 symbol = " "
