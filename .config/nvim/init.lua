@@ -6,6 +6,7 @@ Plug('nvim-lualine/lualine.nvim')
 Plug('nvim-tree/nvim-web-devicons')
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 Plug('tpope/vim-fugitive')
+Plug('norcalli/nvim-colorizer.lua')
 vim.call('plug#end')
 
 -- Colourscheme Settings
@@ -36,7 +37,8 @@ vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { noremap = true, silent = tru
 vim.api.nvim_set_keymap('n', '<leader>s', ':source<CR>', { noremap = true, silent = true })
 -- Leader p runs pyython code
 vim.api.nvim_set_keymap('n', '<leader>p', ':w<CR>:!python %<CR>', { noremap = true })
-
+-- Leader c colorizes file
+vim.api.nvim_set_keymap('n', '<leader>c', ':ColorizerToggle<CR>', {noremap = true})
 
 -- Treesitter Settings
 require('nvim-treesitter.configs').setup{
@@ -47,3 +49,6 @@ require('nvim-treesitter.configs').setup{
 require('lualine').setup {
 	options = { theme = 'everforest' }
 }
+
+-- Nvim-Colorizer Settings
+require('colorizer').setup{}
