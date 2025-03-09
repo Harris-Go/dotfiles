@@ -33,7 +33,7 @@ vim.o.incsearch = true			-- Highlight incrementally
 vim.api.nvim_set_keymap('n', '<space>', '<nop>', {noremap = true, silent = true } )
 vim.g.mapleader = ' '
 -- Escape clears highlighting
-vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<leader> ', ':noh<CR>', { noremap = true, silent = true })
 -- Leader s sources the file
 vim.api.nvim_set_keymap('n', '<leader>s', ':source<CR>', { noremap = true, silent = true })
 -- Leader p runs pyython code
