@@ -1,6 +1,5 @@
-theme = everforest-dark
+theme = gruvbox-material-hard-dark
 background-opacity = 0.9
-gtk-titlebar = false
-window-decoration = true
-gtk-adwaita = false
 font-size = 14
+
+window-decoration = client
