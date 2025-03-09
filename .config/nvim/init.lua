@@ -30,7 +30,8 @@ vim.o.incsearch = true			-- Highlight incrementally
 
 -- KEYBOARD REMAPS
 -- Leader Key
-vim.g.mapleader = ';'
+vim.api.nvim_set_keymap('n', '<space>', '<nop>', {noremap = true, silent = true } )
+vim.g.mapleader = ' '
 -- Escape clears highlighting
 vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { noremap = true, silent = true })
 -- Leader s sources the file
@@ -39,6 +40,8 @@ vim.api.nvim_set_keymap('n', '<leader>s', ':source<CR>', { noremap = true, silen
 vim.api.nvim_set_keymap('n', '<leader>p', ':w<CR>:!python %<CR>', { noremap = true })
 -- Leader c colorizes file
 vim.api.nvim_set_keymap('n', '<leader>c', ':ColorizerToggle<CR>', {noremap = true})
+-- Remap jk to escape normal mode
+vim.keymap.set({'v','i'}, 'jk', '<Esc>', { noremap = true, silent = true } )
 
 -- Treesitter Settings
 require('nvim-treesitter.configs').setup{
